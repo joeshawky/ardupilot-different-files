@@ -407,19 +407,21 @@ const AP_Param::Info Sub::var_info[] = {
     // @Range: 0 250
     // @User: Advanced
     GSCALAR(cur_avoidance_m, "CUR_AVOIDANCE_M", CUR_AVOIDANCE_M_DEFAULT),
-
+    
     // @Param: max_avoidance_m
     // @DisplayName: max_avoidance_m
     // @Description: Meters for any objects below rov
     // @Range: 0 250
     // @User: Advanced
     GSCALAR(max_avoidance_m, "MAX_AVOIDANCE_M", MAX_AVOIDANCE_M_DEFAULT),
+    
     // variables not in the g class which contain EEPROM saved variables
+    
 
 #if AP_CAMERA_ENABLED
-    // @Group: CAM_
+    // @Group: CAM
     // @Path: ../libraries/AP_Camera/AP_Camera.cpp
-    GOBJECT(camera,           "CAM_", AP_Camera),
+    GOBJECT(camera, "CAM", AP_Camera),
 #endif
 
     // @Group: RELAY_
@@ -430,9 +432,9 @@ const AP_Param::Info Sub::var_info[] = {
     // @Path: ../libraries/AP_Compass/AP_Compass.cpp
     GOBJECT(compass,        "COMPASS_", Compass),
 
-    // @Group: INS_
+    // @Group: INS
     // @Path: ../libraries/AP_InertialSensor/AP_InertialSensor.cpp
-    GOBJECT(ins,            "INS_", AP_InertialSensor),
+    GOBJECT(ins,            "INS", AP_InertialSensor),
 
     // @Group: WPNAV_
     // @Path: ../libraries/AC_WPNav/AC_WPNav.cpp
